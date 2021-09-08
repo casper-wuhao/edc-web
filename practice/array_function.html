@@ -1,0 +1,122 @@
+<!--
+编写一个方法 去掉一个数组的重复元素
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//方法一
+<script type="text/javascript">
+   var arr=[0,2,3,4,4,0,2];
+   var obj = {};
+   var tmp = [];
+   for(var i = 0;i<arr.length;i++){
+       if(!obj[arr[i]]){
+           obj[arr[i]] = 1;
+           tmp.push(arr[i]);
+       }
+   }
+   console.log("编写一个方法 去掉一个数组的重复元素");
+   console.log(arr);
+   console.log(tmp);
+</script>
+//方法二
+<script type="text/javascript">
+    var arr = [1,5,6,7,9,3,6,1,9];
+    var arr2 = [];
+    for(var i = 0;i<arr.length;i++){
+        if(arr2.indexOf(arr[i])<0){ //indexOf（）如果要检索的字符串值没有出现，则该方法返回-1 。可以用于数组去重
+            arr2.push(arr[i]);
+        }
+    }
+    arr2.sort();
+    console.log(arr);
+    console.log(arr2);
+</script>
+
+
+
+<!--
+求数组的最值？
+-->
+//方法一
+<script type="text/javascript">
+    var arr = [51,5,6,163,4,6,9,654,264,220];
+    var max = Math.max.apply(null,arr);
+    var min = Math.min.apply(null,arr);
+    console.log("求数组的最值？");
+    console.log(max);
+    console.log(min);
+</script>
+
+//方法二
+<script type="text/javascript">
+    var arr = [65,61,6312,6,135,2,20,31,89];
+
+    arr.max = function (arr) {
+        return Math.max.apply(Math,arr);
+    }
+    arr.min = function (arr) {
+        return Math.min.apply(Math,arr);
+    }
+
+    var max = arr.max(arr);
+    console.log(max);
+    var min = arr.min(arr);
+    console.log(min);
+</script>
+
+
+
+<!--
+数组排序相关
+-->
+<script type="text/javascript">
+    var arr = [3,43,23,45,65,90];
+    function sortnum(a,b) {
+        return a - b;
+    }
+     var arr1 = arr.sort(sortnum);
+    console.log("数组从小到大排序");
+    console.log(arr1);
+
+    function sortnum1(a,b) {
+        return b - a;
+    }
+    var arr2 = arr.sort(sortnum1);
+    console.log("数组从大到小排序");
+    console.log(arr1);
+</script>
+
+
+
+<!--
+数组的翻转 非reverse
+-->
+//方法一
+<script type="text/javascript">
+    var arr = [1,5,7,9,15];
+    var arr1 = [];
+    while (arr.length){
+        var tmp = arr.pop();
+        arr1.push(tmp);
+    }
+    console.log("数组的翻转 非reverse,原数组是[1,5,7,9,15]");
+    console.log(arr1);
+</script>
+
+//方法二
+<script type="text/javascript">
+    var arr = [1,5,7,9,15];
+    var arr1 = [];
+    while (arr.length){
+        var tmp = arr.shift();
+        arr1.unshift(tmp);
+    }
+    console.log(arr1);
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!--
+通过使用滑动效果，在显示和隐藏状态之间切换 <p> 元素：
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".a").click(function () {
+                $("p").slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+<p>人生如梦，一尊还酹江月！</p>
+<button class="a">显示/隐藏</button>
+
+
+
+<!--
+使用jquery来禁用浏览器的前进后退的按钮
+-->
+<script type="text/javascript" language="JavaScript">
+    $(document).ready(function () {
+        window.history.forward(1);
+        //or window.history.forward(-1)
+    });
+</script>
+
+
+<!--
+简单的$.ajax()的请求方式
+-->
+<script type="text/javascript">
+    $.ajax({
+        url:'http://www.baidu.com',
+        type:'POST',
+        data:data,
+        cache:true,
+        headers:{},
+        beforeSend:function(){},
+        success:function(){},
+        error:function(){},
+        complete:function(){}
+    })
+</script>
+</body>
+</html>

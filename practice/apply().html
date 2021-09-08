@@ -1,0 +1,19 @@
+<!--
+apply()/call()求数组最值
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+var  numbers = [5, 458 , 120 , -215 ];
+var  maxInNumbers = Math.max.apply(this, numbers);
+document.write("最大数为：" + maxInNumbers);  // 458
+var maxInNumbers = Math.max.call(this,5, 458 , 120 , -215);
+console.log(maxInNumbers);  // 458
+</script>
+</body>
+</html>

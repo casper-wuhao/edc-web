@@ -1,0 +1,9 @@
+admin.html       管理员界面
+student.html     学生用户界面
+teacher.html     教师用户界面
+examadd.html         试题添加界面
+paperadmin.html      试卷管理页面
+studentadmin.html    学生用户管理页面
+subjectadmin.html    学科管理界面
+teacheradmin.html    教师用户管理界面
+login文件夹下login.html   登录页面

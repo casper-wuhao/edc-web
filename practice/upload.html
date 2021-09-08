@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body>
+<form id="form1" enctype="multipart/form-data" method="post" action="http://121.14.204.68:36161/eqp/upload?strOperator=chenzl"> 
+<div class="row"> 
+<label for="fileToUpload">选择文件</label> 
+<input type="file" name="fileName" id="fileName" onchange="fileSelected();"/> 
+    </div> 
+<div id="fileName"></div> 
+<div id="fileSize"></div> 
+<div id="fileType"></div> 
+<div class="row"> 
+上传者：<input type="text" name="name" id="name"/> 
+<input type="button" onclick="uploadFile()" value="上传"/> 
+<input type="button" onclick="cancleUploadFile()" value="取消"/> 
+   </div> 
+<div id="progressNumber"></div> 
+</form>
+</body>
+</html>

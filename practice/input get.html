@@ -1,0 +1,19 @@
+<!--
+input点击，获取值
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" id="text" value="吴昊" />
+<script type="text/javascript">
+    var btn = document.getElementById("text");
+    btn.onclick = function() {
+        alert(this.value);    //此处的this是按钮元素
+    }
+</script>
+</body>
+</html>
